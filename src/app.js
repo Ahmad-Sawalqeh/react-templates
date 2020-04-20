@@ -4,7 +4,6 @@ import Weather from "./components/weather/weather.js";
 import "./app.scss";
 
 const myKey = "15a78bdf7be0fd8857aa0222e8baa4b1";
-// const PERSONAL_TOKEN = '209bb33293e4da97ca076eb08f202e82698884d6';
 
 class App extends Component {
   constructor(props) {
