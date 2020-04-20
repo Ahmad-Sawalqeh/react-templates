@@ -32,7 +32,7 @@ class App extends Component {
       return;
     }
 
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${myKey}`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${myKey}`);
 
     const data = await response.json();
 
