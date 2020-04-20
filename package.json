@@ -27,6 +27,7 @@
   "homepage": "https://ahmad-sawalqeh.github.io/weatherApp/",
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
