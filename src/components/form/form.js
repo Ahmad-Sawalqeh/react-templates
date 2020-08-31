@@ -3,17 +3,17 @@ import "./form.scss";
 
 const Form = props => {
   const { loadweather, error } = props;
+
   return (
     <div className="container">
       <form onSubmit={loadweather}>
         <div>
           {
-            error ? 
+            error && (
               <div className="alert alert-danger font-weight-bold">
                 Please Enter Both City and Country ... !
-              </div>
-            : 
-              null            
+              </div>  
+            )      
           }
         </div>
         <div className="row">

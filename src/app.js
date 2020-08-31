@@ -28,7 +28,12 @@ class App extends Component {
     const city = e.target.city.value;
 
     if (!(country && city) || city === '' || country === '') {
-      this.setState({ error: true });
+      await this.setState({ error: true });
+      if(this.state.error){
+        setTimeout(() => {
+          this.setState({ error: false });
+        }, 3500)
+      }
       return;
     }
 
@@ -53,7 +58,7 @@ class App extends Component {
   render() {
     return (
       <div className="text-center">
-        <Form loadweather={this.getWeather} error={this.state.error} />
+        <Form loadweather={this.getWeather} error={this.state.error}/>
         <Weather
           id={this.state.id}
           cityname={this.state.city}
