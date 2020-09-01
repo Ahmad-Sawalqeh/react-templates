@@ -32,6 +32,7 @@ class App extends Component {
       if(this.state.error){
         setTimeout(() => {
           this.setState({ error: false });
+          
         }, 3500)
       }
       return;
