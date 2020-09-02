@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "./components/form/form.js";
 import Weather from "./components/weather/weather.js";
+import Error from "./components/error/error";
 import "./app.scss";
 
 const myKey = "15a78bdf7be0fd8857aa0222e8baa4b1";
@@ -31,8 +32,7 @@ class App extends Component {
       await this.setState({ error: true });
       if(this.state.error){
         setTimeout(() => {
-          this.setState({ error: false });
-          
+          this.setState({ error: false });          
         }, 3500)
       }
       return;
@@ -58,8 +58,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="text-center">
-        <Form loadweather={this.getWeather} error={this.state.error}/>
+      <div className="container text-center appBody pt-5">
+        <div className="errorHeight">
+          { this.state.error && <Error /> }
+        </div>
+        <Form loadweather={this.getWeather} />
         <Weather
           id={this.state.id}
           cityname={this.state.city}
