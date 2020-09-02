@@ -21,21 +21,20 @@ const Weather = props => {
   return (
     <div className="container mt-5 text-light">             
       {
-        temp_celsius ? (
+        temp_celsius && (
           <>
             <div className="Card mx-auto content"> 
               <h1 className="text-white py-3">{cityname}</h1>
               <h5 className="py-4"><i className={`wi ${weatherIcon(id)} display-1`} /></h5>
               <div className="py-3">
                 <h1 className="py-2">{temp_celsius}&deg;</h1>
-                <span className="px-4">{temp_min}&deg;</span>
-                <span className="px-4">{temp_max}&deg;</span>
+                <span className="px-4">Min&nbsp;&nbsp;{temp_min}&deg;</span>
+                <span className="px-4">Max&nbsp;&nbsp;{temp_max}&deg;</span>
               </div>
               <h4 className="py-3 text-capitalize">{description}</h4>
             </div>
           </>
         )
-        : null
       }
     </div>
   );
